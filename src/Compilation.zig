@@ -3498,6 +3498,7 @@ fn processOneJob(comp: *Compilation, job: Job, prog_node: *std.Progress.Node) !v
                         .is_naked_fn = false,
                         .fwd_decl = fwd_decl.toManaged(gpa),
                         .ctypes = .{},
+                        .anon_decl_deps = .{},
                     };
                     defer {
                         dg.ctypes.deinit(gpa);
